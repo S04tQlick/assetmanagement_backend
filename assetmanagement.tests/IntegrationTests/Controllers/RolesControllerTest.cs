@@ -57,7 +57,7 @@ public class RolesControllerTest (ApplicationFixture fixture, ITestOutputHelper 
         var rolesData = await GetRolesAsync();
         if (rolesData is not null)
         {
-            foreach (var row in rolesData!)
+            foreach (var row in rolesData)
             {
                 row.Id.Should().NotBeEmpty();
                 row.RoleName.Should().NotBeEmpty();
