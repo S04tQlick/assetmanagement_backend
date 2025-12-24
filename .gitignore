@@ -44,6 +44,7 @@ ScaffoldingReadMe.txt
 ##############################
 
 # Environment variables
+**/.env
 .env
 .env.*
 !.env.example
@@ -76,6 +77,7 @@ packages/
 *.ldf
 *.ndf
 *.dbmdl
+**/postgres_data
 
 ##############################
 # Logs & Temp
