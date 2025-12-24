@@ -1,12 +1,9 @@
 using AssetManagement.API.Constants;
 using AssetManagement.Entities.DTOs.Responses;
-using AssetManagement.Entities.Enums;
 using AssetManagement.Entities.FakeData;
 using AssetManagement.Tests.Fixtures;
-using AssetManagement.Tests.Helpers;
 using AssetManagement.Tests.Helpers.ApiOperations;
 using AssetManagement.Tests.Helpers.Operations;
-using SixLabors.ImageSharp;
 
 
 namespace AssetManagement.Tests.IntegrationTests.Controllers;
@@ -60,26 +57,23 @@ public class BranchesControllerTests(ApplicationFixture fixture)
     public async Task It_Should_Get_Branches()
     {
         var branchesData = await GetBranchesDataAsync();
-    
+
         if (branchesData is not null)
         {
             foreach (var row in branchesData)
             {
                 row.Id.Should().NotBeEmpty();
-                row.BranchName.Should().NotBeEmpty(); 
+                row.BranchName.Should().NotBeEmpty();
                 row.BranchName.Should().NotBeNullOrWhiteSpace();
-                
+
                 row.Latitude.Should().NotBe(0);
                 row.Longitude.Should().NotBe(0);
-                
+
                 row.IsActive.Should().Be(row.IsActive);
                 row.IsHeadOffice.Should().Be(row.IsHeadOffice);
-                
+
                 row.InstitutionId.Should().NotBe(row.Id);
             }
         }
     }
-
-
-
 }
