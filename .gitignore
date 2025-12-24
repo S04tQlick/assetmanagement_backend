@@ -1,0 +1,55 @@
+# Environment files (your API contains .env)
+**/.env
+**/.env.*
+!.env.example
+
+# Postgres local volume (docker-compose)
+**/postgres_data/
+
+# Coverage output (recursive)
+**/coverage/
+coverage/
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# Rider / JetBrains
+.idea/
+*.iml
+riderModule.iml
+/_ReSharper.Caches/
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Build artifacts (recursive safety)
+**/bin/
+**/obj/
+
+# NuGet packages
+/packages/
+
+# Logs
+*.log
+logs/
+**/logs/
+
+# Docker
+docker-data/
+*.pid
+
+
+# Ignore API-specific build folders
+AssetManagement.API/bin/
+AssetManagement.API/obj/
+
+# Ignore API-specific environment files
+AssetManagement.API/.env
+AssetManagement.API/.env.*
+
+# Ignore API-specific database folders
+AssetManagement.API/postgres_data/
