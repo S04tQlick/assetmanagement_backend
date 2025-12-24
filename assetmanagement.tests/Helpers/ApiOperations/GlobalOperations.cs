@@ -5,6 +5,18 @@ namespace AssetManagement.Tests.Helpers.ApiOperations;
 
 public class GlobalOperations(ApplicationFixture fixture)
 {
+    public async Task<IEnumerable<AssetTypesResponse>?> GetAssetTypesAsync()
+    {
+        var response = await fixture.Client.GetAsync(
+            ApiPath.SetAssetTypesControllerRoute()
+        );
+
+        response.EnsureSuccessStatusCode();
+
+        var content = await response.Content.ReadAsStringAsync();
+        return TestOperations.Deserialize<IEnumerable<AssetTypesResponse>>(content);
+    }
+    
     public async Task<IEnumerable<InstitutionsResponse>?> GetInstitutionsAsync()
     {
         var response = await fixture.Client.GetAsync(ApiPath.SetInstitutionsControllerRoute());
@@ -22,18 +34,6 @@ public class GlobalOperations(ApplicationFixture fixture)
 
         var content = await response.Content.ReadAsStringAsync();
         return TestOperations.Deserialize<IEnumerable<BranchesResponse>>(content);
-    }
-
-    public async Task<IEnumerable<AssetTypesResponse>?> GetAssetTypesAsync()
-    {
-        var response = await fixture.Client.GetAsync(
-            ApiPath.SetAssetTypesControllerRoute()
-        );
-
-        response.EnsureSuccessStatusCode();
-
-        var content = await response.Content.ReadAsStringAsync();
-        return TestOperations.Deserialize<IEnumerable<AssetTypesResponse>>(content);
     }
 
     public async Task<IEnumerable<AssetCategoriesResponse>?> GetAssetCategoriesByInstitutionAndAssetTypeAsync(

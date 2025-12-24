@@ -46,7 +46,6 @@ public static class AddDependencyInjectionExtentionCollection
 
         builder.Host.UseSerilog();
         
-        
         builder.Services.AddSwaggerGen();
         builder.Services.AddSwaggerGen(c =>
         {
@@ -82,25 +81,11 @@ public static class AddDependencyInjectionExtentionCollection
 
         builder.Services.AddHttpContextAccessor();
         
-        // Register AutoMapper
-        //builder.Services.AddAutoMapper(typeof(Program)); 
-        
         builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-        
 
         builder.Services.AddScoped(typeof(IRepositoryQueryHandler<>), typeof(RepositoryQueryHandler<>));
         builder.Services.AddScoped<IInstitutionContextService, InstitutionContextService>();
         
-
-        
-        
-        //builder.Services.AddAutoMapper(cfg => { }, typeof(InstitutionProfile).Assembly);
-        
-        // builder.Services.AddAutoMapper(typeof(InstitutionProfile).Assembly);
-        // builder.Services.AddAutoMapper(cfg => { }, typeof(InstitutionProfile).Assembly);
-        //builder.Services.AddAutoMapper(typeof(InstitutionProfile).Assembly, typeof(AssetProfile).Assembly);
-
-
         
         builder.Services.AddScoped<IAssetTypeRepository, AssetTypeRepository>();
         builder.Services.AddScoped<IAssetTypeService, AssetTypeService>();
@@ -136,13 +121,6 @@ public static class AddDependencyInjectionExtentionCollection
         builder.Services.AddScoped<IUserRolesService, UserRolesService>();
         
         
-        // //Sanity Image repository and services
-        // builder.Services.AddScoped<ISanityService, SanityService>();
-        // builder.Services.AddScoped<ISanityRepository, SanityRepository>();
-        // builder.Services.AddHttpClient();
-        
-        
-        
         builder.Services.AddScoped<ISanityImageRepository, SanityImageRepository>();
         builder.Services.AddScoped<ISanityImageService, SanityImageService>();
         builder.Services.AddMediatR(cfg =>
@@ -151,10 +129,6 @@ public static class AddDependencyInjectionExtentionCollection
         });
         builder.Services.AddHostedService<SanityAssetCleanupWorker>();
         
-        
-        
-        
-
 
         builder.Services.AddScoped<IEmailService, EmailService>();
         builder.Services.AddScoped<IRedisPublisher, RedisPublisher>();
@@ -168,9 +142,6 @@ public static class AddDependencyInjectionExtentionCollection
         builder.Services.AddHostedService<SubscriptionBackgroundService>();
         builder.Services.AddHostedService<SubscriptionMaintenanceService>();
         
-        
-        
         builder.Services.AddHttpClient();
-
     }
 }
