@@ -22,3 +22,4 @@ C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Managemen
 C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\AssetManagement_Backend\AssetManagement.Entities\obj\Debug\net9.0\refint\AssetManagement.Entities.dll
 C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\AssetManagement_Backend\AssetManagement.Entities\obj\Debug\net9.0\AssetManagement.Entities.pdb
 C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\AssetManagement_Backend\AssetManagement.Entities\obj\Debug\net9.0\ref\AssetManagement.Entities.dll
+C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.Entities\obj\Debug\net9.0\AssetManagement.Entities.sourcelink.json
