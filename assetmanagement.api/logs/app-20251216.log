@@ -1,0 +1,607 @@
+2025-12-16 00:36:44.973 +00:00 [INF] Fetching AssetCategoriesModel by id "ffab2082-5187-42ea-a3c6-114f717611a5" (User: anonymous, Inst: none)
+2025-12-16 00:37:11.847 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 00:37:12.276 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 00:37:12.500 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 00:37:12.523 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 00:37:12.609 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 00:37:12.666 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 00:37:38.938 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 00:37:39.122 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 00:37:39.155 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 00:38:47.460 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 00:38:47.659 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 00:38:47.671 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 00:44:40.551 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 00:44:40.689 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 00:44:40.702 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 00:46:12.387 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 00:46:12.503 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 00:46:12.513 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 00:46:52.253 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 00:46:52.309 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 00:46:52.325 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 00:47:14.447 +00:00 [ERR] An unhandled exception has occurred while executing the request. (User: , Inst: )
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(JsonTypeInfo typeInfo, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at AssetManagement.API.Middleware.InstitutionContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\InstitutionContextMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AssetManagement.API.Middleware.LoggingContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\LoggingContextMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-16 00:48:13.060 +00:00 [ERR] An unhandled exception has occurred while executing the request. (User: , Inst: )
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(JsonTypeInfo typeInfo, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at AssetManagement.API.Middleware.InstitutionContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\InstitutionContextMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AssetManagement.API.Middleware.LoggingContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\LoggingContextMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-16 00:52:21.110 +00:00 [ERR] An unhandled exception has occurred while executing the request. (User: , Inst: )
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(JsonTypeInfo typeInfo, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at AssetManagement.API.Middleware.InstitutionContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\InstitutionContextMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AssetManagement.API.Middleware.LoggingContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\LoggingContextMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-16 00:53:01.386 +00:00 [ERR] An unhandled exception has occurred while executing the request. (User: , Inst: )
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(JsonTypeInfo typeInfo, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at AssetManagement.API.Middleware.InstitutionContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\InstitutionContextMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AssetManagement.API.Middleware.LoggingContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\LoggingContextMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-16 00:54:12.084 +00:00 [ERR] An unhandled exception has occurred while executing the request. (User: , Inst: )
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(JsonTypeInfo typeInfo, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at AssetManagement.API.Middleware.InstitutionContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\InstitutionContextMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AssetManagement.API.Middleware.LoggingContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\LoggingContextMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-16 00:57:03.010 +00:00 [ERR] An unhandled exception has occurred while executing the request. (User: , Inst: )
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(JsonTypeInfo typeInfo, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at AssetManagement.API.Middleware.InstitutionContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\InstitutionContextMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AssetManagement.API.Middleware.LoggingContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\LoggingContextMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-16 00:57:50.267 +00:00 [ERR] An unhandled exception has occurred while executing the request. (User: , Inst: )
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(JsonTypeInfo typeInfo, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at AssetManagement.API.Middleware.InstitutionContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\InstitutionContextMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AssetManagement.API.Middleware.LoggingContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\LoggingContextMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-16 01:36:30.680 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 01:36:30.746 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 01:36:30.760 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 01:39:40.563 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 01:39:40.698 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 01:39:40.699 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 01:40:34.420 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 01:40:34.463 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 01:40:34.513 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 01:40:51.534 +00:00 [ERR] An unhandled exception has occurred while executing the request. (User: , Inst: )
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(JsonTypeInfo typeInfo, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at AssetManagement.API.Middleware.InstitutionContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\InstitutionContextMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AssetManagement.API.Middleware.LoggingContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\LoggingContextMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-16 01:42:10.528 +00:00 [ERR] An unhandled exception has occurred while executing the request. (User: , Inst: )
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(JsonTypeInfo typeInfo, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at AssetManagement.API.Middleware.InstitutionContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\InstitutionContextMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AssetManagement.API.Middleware.LoggingContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\LoggingContextMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-16 01:57:44.106 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 01:57:44.106 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 01:57:44.106 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 01:58:55.643 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 01:58:55.643 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 01:58:55.644 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 01:59:06.993 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 01:59:07.047 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 01:59:07.047 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 01:59:21.410 +00:00 [ERR] An unhandled exception has occurred while executing the request. (User: , Inst: )
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(JsonTypeInfo typeInfo, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at AssetManagement.API.Middleware.InstitutionContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\InstitutionContextMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AssetManagement.API.Middleware.LoggingContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\LoggingContextMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-16 02:00:54.409 +00:00 [INF] 💤 Application shutting down... (User: , Inst: )
+2025-12-16 02:01:49.411 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-12-16 02:01:49.593 +00:00 [INF] Subscription background service started at "2025-12-16T02:01:49.5913872Z" (User: , Inst: )
+2025-12-16 02:01:51.813 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-12-16 02:01:51.899 +00:00 [ERR] Hosting failed to start (User: , Inst: )
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+2025-12-16 02:01:51.909 +00:00 [FTL] ❌ Application startup failed! (User: , Inst: )
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at AssetManagement.API.Extentions.ProgramExtention.AppServiceExtentionCollection.AppBuilderAddUsings(WebApplicationBuilder builder) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Extentions\ProgramExtention\AppServiceExtentionCollection.cs:line 34
+2025-12-16 02:01:51.909 +00:00 [INF] 💤 Application shutting down... (User: , Inst: )
+2025-12-16 02:02:07.230 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-12-16 02:02:07.602 +00:00 [INF] Subscription background service started at "2025-12-16T02:02:07.6004452Z" (User: , Inst: )
+2025-12-16 02:02:11.387 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-12-16 02:02:12.421 +00:00 [INF] Subscription check completed at "2025-12-16T02:02:12.4215657Z" (User: , Inst: )
+2025-12-16 02:02:12.724 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-12-16 02:02:12.733 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-12-16 02:02:12.737 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-12-16 02:02:29.532 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-12-16 02:02:30.282 +00:00 [ERR] An unhandled exception has occurred while executing the request. (User: , Inst: )
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'AssetManagement.Entities.DTOs.Requests.AssetsUpdateRequest'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(JsonTypeInfo typeInfo, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at AssetManagement.API.Middleware.InstitutionContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\InstitutionContextMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AssetManagement.API.Middleware.LoggingContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\LoggingContextMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-16 02:02:54.195 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 02:02:54.326 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 02:02:54.326 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 02:02:54.328 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 02:02:54.377 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 02:02:54.425 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 02:03:57.920 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 02:03:58.136 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 02:03:58.137 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 02:04:13.216 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 02:04:13.246 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 02:04:13.255 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 02:04:13.289 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 02:04:13.302 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 02:04:13.317 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 02:06:36.829 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 02:06:36.951 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 02:06:37.013 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 02:11:15.483 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 02:11:15.595 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 02:11:15.686 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 02:12:05.653 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 02:12:05.848 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 02:12:05.848 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 02:13:30.553 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 02:13:30.586 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 02:13:30.613 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 02:26:11.261 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 02:26:11.261 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 02:26:11.340 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 02:26:11.883 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 02:26:11.902 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 02:26:11.916 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 02:30:21.851 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 02:30:21.939 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 02:30:22.005 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 02:30:22.066 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 02:30:22.160 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 02:30:22.188 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 02:30:34.506 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 02:30:34.506 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 02:30:34.506 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 07:51:41.128 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-12-16 07:51:41.378 +00:00 [INF] Subscription background service started at "2025-12-16T07:51:41.3768480Z" (User: , Inst: )
+2025-12-16 07:51:45.015 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-12-16 07:51:45.883 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-12-16 07:51:45.891 +00:00 [INF] Subscription check completed at "2025-12-16T07:51:45.8916535Z" (User: , Inst: )
+2025-12-16 07:51:46.288 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-12-16 07:51:46.293 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-12-16 07:51:46.297 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-12-16 07:58:34.096 +00:00 [ERR] Failed executing DbCommand (57ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Decimal), @p2='?' (DbType = Guid), @p3='?', @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal), @p9='?', @p10='?' (DbType = Guid), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTime), @p13='?' (DbType = DateTime), @p14='?' (DbType = DateTime), @p15='?' (DbType = Decimal), @p16='?' (DbType = Decimal), @p17='?', @p18='?', @p19='?', @p20='?' (DbType = Int32), @p21='?' (DbType = DateTime), @p22='?' (DbType = Int32), @p23='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Assets" ("Id", "AccumulatedDepreciation", "AssetCategoryId", "AssetName", "AssetTypeId", "BranchId", "CreatedAt", "CurrentUnits", "CurrentValue", "DepreciationMethod", "InstitutionId", "IsActive", "MaintenanceDueDate", "NextMaintenanceDate", "PurchaseDate", "PurchasePrice", "SalvageValue", "SanityAssetId", "SanityUrl", "SerialNumber", "UnitsTotal", "UpdatedAt", "UsefulLifeYears", "VendorId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23); (User: anonymous, Inst: none)
+2025-12-16 07:58:34.146 +00:00 [ERR] An exception occurred in the database while saving changes for context type 'AssetManagement.API.DAL.DatabaseContext.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Assets" violates foreign key constraint "FK_Assets_Vendors_VendorId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Assets" violates foreign key constraint "FK_Assets_Vendors_VendorId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Assets
+    ConstraintName: FK_Assets_Vendors_VendorId
+    File: ri_triggers.c
+    Line: 2610
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) (User: anonymous, Inst: none)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Assets" violates foreign key constraint "FK_Assets_Vendors_VendorId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Assets" violates foreign key constraint "FK_Assets_Vendors_VendorId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Assets
+    ConstraintName: FK_Assets_Vendors_VendorId
+    File: ri_triggers.c
+    Line: 2610
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AssetManagement.API.DAL.QueryHandlers.RepositoryQueryHandler.RepositoryQueryHandler`1.CreateAsync(TEntity entity) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\DAL\QueryHandlers\RepositoryQueryHandler\RepositoryQueryHandler.cs:line 45
+   at AssetManagement.API.DAL.Services.AssetService.AssetService.CreateAsync(AssetsCreateRequest request) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\DAL\Services\AssetService\AssetService.cs:line 53
+   at AssetManagement.API.Controllers.AssetsController.Create(AssetsCreateRequest request) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Controllers\AssetsController.cs:line 53
+   at lambda_method884(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2025-12-16 07:58:34.149 +00:00 [ERR] An unhandled exception has occurred while executing the request. (User: , Inst: )
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Assets" violates foreign key constraint "FK_Assets_Vendors_VendorId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Assets" violates foreign key constraint "FK_Assets_Vendors_VendorId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Assets
+    ConstraintName: FK_Assets_Vendors_VendorId
+    File: ri_triggers.c
+    Line: 2610
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AssetManagement.API.DAL.QueryHandlers.RepositoryQueryHandler.RepositoryQueryHandler`1.CreateAsync(TEntity entity) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\DAL\QueryHandlers\RepositoryQueryHandler\RepositoryQueryHandler.cs:line 45
+   at AssetManagement.API.DAL.Services.AssetService.AssetService.CreateAsync(AssetsCreateRequest request) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\DAL\Services\AssetService\AssetService.cs:line 53
+   at AssetManagement.API.Controllers.AssetsController.Create(AssetsCreateRequest request) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Controllers\AssetsController.cs:line 53
+   at lambda_method884(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at AssetManagement.API.Middleware.InstitutionContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\InstitutionContextMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AssetManagement.API.Middleware.LoggingContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.API\Middleware\LoggingContextMiddleware.cs:line 16
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-16 08:00:13.598 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 08:00:13.640 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 08:00:13.640 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 08:00:31.915 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 08:00:31.948 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 08:00:31.948 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 08:00:31.968 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 08:00:32.022 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 08:00:32.034 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 08:14:00.071 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 08:14:00.072 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 08:14:00.071 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 08:14:00.877 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 08:14:00.910 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 08:14:00.923 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 08:18:24.329 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 08:18:24.368 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 08:18:24.368 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)
+2025-12-16 08:24:27.977 +00:00 [INF] Querying InstitutionsModel service (User: anonymous, Inst: none)
+2025-12-16 08:24:28.017 +00:00 [INF] Querying AssetCategoriesModel service (User: anonymous, Inst: none)
+2025-12-16 08:24:28.040 +00:00 [INF] Querying AssetTypesModel service (User: anonymous, Inst: none)

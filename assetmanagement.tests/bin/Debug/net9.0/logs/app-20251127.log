@@ -1,0 +1,587 @@
+2025-11-27 06:39:30.346 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 06:39:30.399 +00:00 [INF] Subscription background service started at "2025-11-27T06:39:30.3988274Z" (User: , Inst: )
+2025-11-27 06:39:31.517 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 06:39:31.724 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 06:39:31.894 +00:00 [INF] Subscription check completed at "2025-11-27T06:39:31.8946616Z" (User: , Inst: )
+2025-11-27 06:39:32.030 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 06:39:32.033 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 06:39:32.034 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 07:21:44.578 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 07:21:44.613 +00:00 [INF] Subscription background service started at "2025-11-27T07:21:44.6134044Z" (User: , Inst: )
+2025-11-27 07:21:45.516 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 07:21:45.675 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 07:21:45.776 +00:00 [INF] Subscription check completed at "2025-11-27T07:21:45.7761804Z" (User: , Inst: )
+2025-11-27 07:21:45.862 +00:00 [INF] Querying health. (User: anonymous, Inst: none)
+2025-11-27 07:21:45.863 +00:00 [INF] Health action queried successfully. (User: anonymous, Inst: none)
+2025-11-27 07:21:45.886 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 07:21:45.888 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 07:21:45.889 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 07:21:54.611 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 07:21:54.644 +00:00 [INF] Subscription background service started at "2025-11-27T07:21:54.6443880Z" (User: , Inst: )
+2025-11-27 07:21:55.553 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 07:21:55.697 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 07:21:55.772 +00:00 [INF] Subscription check completed at "2025-11-27T07:21:55.7720242Z" (User: , Inst: )
+2025-11-27 07:21:55.913 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 07:21:55.916 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 07:21:55.917 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 07:21:56.180 +00:00 [ERR] Failed executing DbCommand (12ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Guid), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTime), @p11='?', @p12='?', @p13='?', @p14='?', @p15='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "CreatedAt", "DisplayName", "EmailAddress", "FirstName", "InstitutionId", "IsActive", "IsEmailConfirmed", "IsEmailVerified", "IsPhoneConfirmed", "LastLogin", "LastName", "NormalizedEmail", "PasswordHash", "PhoneNumber", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15); (User: anonymous, Inst: none)
+2025-11-27 07:21:56.194 +00:00 [ERR] An exception occurred in the database while saving changes for context type 'AssetManagement.API.DAL.DatabaseContext.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ColumnName: PasswordHash
+    File: execMain.c
+    Line: 1988
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) (User: anonymous, Inst: none)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ColumnName: PasswordHash
+    File: execMain.c
+    Line: 1988
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AssetManagement.API.DAL.QueryHandler.RepositoryQueryHandler.RepositoryQueryHandler`1.CreateAsync(TEntity entity, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\DAL\QueryHandler\RepositoryQueryHandler\RepositoryQueryHandler.cs:line 41
+   at AssetManagement.API.DAL.Services.UsersService.UsersService.CreateAsync(UsersCreateRequest request, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\DAL\Services\UsersService\UsersService.cs:line 47
+   at AssetManagement.API.Controllers.UsersController.Create(UsersCreateRequest request, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\Controllers\UsersController.cs:line 54
+   at lambda_method673(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Runtime.CompilerServices.ValueTaskAwaiter`1.GetResult()
+2025-11-27 07:21:56.195 +00:00 [ERR] Unhandled exception occurred while processing request: /api/Users/ (User: anonymous, Inst: none)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ColumnName: PasswordHash
+    File: execMain.c
+    Line: 1988
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AssetManagement.API.DAL.QueryHandler.RepositoryQueryHandler.RepositoryQueryHandler`1.CreateAsync(TEntity entity, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\DAL\QueryHandler\RepositoryQueryHandler\RepositoryQueryHandler.cs:line 41
+   at AssetManagement.API.DAL.Services.UsersService.UsersService.CreateAsync(UsersCreateRequest request, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\DAL\Services\UsersService\UsersService.cs:line 47
+   at AssetManagement.API.Controllers.UsersController.Create(UsersCreateRequest request, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\Controllers\UsersController.cs:line 54
+   at lambda_method673(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at AssetManagement.API.Middleware.InstitutionContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\Middleware\InstitutionContextMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AssetManagement.API.Middleware.GlobalExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\Middleware\GlobalExceptionHandlerMiddleware.cs:line 14
+2025-11-27 07:24:15.619 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 07:24:15.723 +00:00 [INF] Subscription background service started at "2025-11-27T07:24:15.7209698Z" (User: , Inst: )
+2025-11-27 07:24:19.281 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 07:52:31.513 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 07:52:32.022 +00:00 [INF] Subscription check completed at "2025-11-27T07:52:32.0223071Z" (User: , Inst: )
+2025-11-27 07:52:32.692 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 07:52:32.708 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 07:52:32.713 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 07:56:01.604 +00:00 [ERR] Failed executing DbCommand (13ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Guid), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTime), @p11='?', @p12='?', @p13='?', @p14='?', @p15='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "CreatedAt", "DisplayName", "EmailAddress", "FirstName", "InstitutionId", "IsActive", "IsEmailConfirmed", "IsEmailVerified", "IsPhoneConfirmed", "LastLogin", "LastName", "NormalizedEmail", "PasswordHash", "PhoneNumber", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15); (User: anonymous, Inst: none)
+2025-11-27 07:56:01.650 +00:00 [ERR] An exception occurred in the database while saving changes for context type 'AssetManagement.API.DAL.DatabaseContext.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ColumnName: PasswordHash
+    File: execMain.c
+    Line: 1988
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) (User: anonymous, Inst: none)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ColumnName: PasswordHash
+    File: execMain.c
+    Line: 1988
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AssetManagement.API.DAL.QueryHandler.RepositoryQueryHandler.RepositoryQueryHandler`1.CreateAsync(TEntity entity, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\DAL\QueryHandler\RepositoryQueryHandler\RepositoryQueryHandler.cs:line 41
+   at AssetManagement.API.DAL.Services.UsersService.UsersService.CreateAsync(UsersCreateRequest request, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\DAL\Services\UsersService\UsersService.cs:line 47
+   at AssetManagement.API.Controllers.UsersController.Create(UsersCreateRequest request, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\Controllers\UsersController.cs:line 54
+   at lambda_method673(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+2025-11-27 07:56:03.290 +00:00 [ERR] Unhandled exception occurred while processing request: /api/Users/ (User: anonymous, Inst: none)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ColumnName: PasswordHash
+    File: execMain.c
+    Line: 1988
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AssetManagement.API.DAL.QueryHandler.RepositoryQueryHandler.RepositoryQueryHandler`1.CreateAsync(TEntity entity, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\DAL\QueryHandler\RepositoryQueryHandler\RepositoryQueryHandler.cs:line 41
+   at AssetManagement.API.DAL.Services.UsersService.UsersService.CreateAsync(UsersCreateRequest request, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\DAL\Services\UsersService\UsersService.cs:line 47
+   at AssetManagement.API.Controllers.UsersController.Create(UsersCreateRequest request, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\Controllers\UsersController.cs:line 54
+   at lambda_method673(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at AssetManagement.API.Middleware.InstitutionContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\Middleware\InstitutionContextMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AssetManagement.API.Middleware.GlobalExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\Middleware\GlobalExceptionHandlerMiddleware.cs:line 14
+2025-11-27 08:03:36.536 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 08:03:36.607 +00:00 [INF] Subscription background service started at "2025-11-27T08:03:36.6063079Z" (User: , Inst: )
+2025-11-27 08:03:38.949 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 08:03:39.600 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 08:03:39.876 +00:00 [INF] Subscription check completed at "2025-11-27T08:03:39.8762756Z" (User: , Inst: )
+2025-11-27 08:03:40.235 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 08:03:40.262 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 08:03:40.265 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 08:05:38.875 +00:00 [ERR] Failed executing DbCommand (12ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Guid), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTime), @p11='?', @p12='?', @p13='?', @p14='?', @p15='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "CreatedAt", "DisplayName", "EmailAddress", "FirstName", "InstitutionId", "IsActive", "IsEmailConfirmed", "IsEmailVerified", "IsPhoneConfirmed", "LastLogin", "LastName", "NormalizedEmail", "PasswordHash", "PhoneNumber", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15); (User: anonymous, Inst: none)
+2025-11-27 08:05:38.924 +00:00 [ERR] An exception occurred in the database while saving changes for context type 'AssetManagement.API.DAL.DatabaseContext.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ColumnName: PasswordHash
+    File: execMain.c
+    Line: 1988
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) (User: anonymous, Inst: none)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ColumnName: PasswordHash
+    File: execMain.c
+    Line: 1988
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AssetManagement.API.DAL.QueryHandler.RepositoryQueryHandler.RepositoryQueryHandler`1.CreateAsync(TEntity entity, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\DAL\QueryHandler\RepositoryQueryHandler\RepositoryQueryHandler.cs:line 41
+   at AssetManagement.API.DAL.Services.UsersService.UsersService.CreateAsync(UsersCreateRequest request, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\DAL\Services\UsersService\UsersService.cs:line 47
+   at AssetManagement.API.Controllers.UsersController.Create(UsersCreateRequest request, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\Controllers\UsersController.cs:line 54
+   at lambda_method673(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2025-11-27 08:05:40.155 +00:00 [ERR] Unhandled exception occurred while processing request: /api/Users/ (User: anonymous, Inst: none)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "PasswordHash" of relation "Users" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ColumnName: PasswordHash
+    File: execMain.c
+    Line: 1988
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AssetManagement.API.DAL.QueryHandler.RepositoryQueryHandler.RepositoryQueryHandler`1.CreateAsync(TEntity entity, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\DAL\QueryHandler\RepositoryQueryHandler\RepositoryQueryHandler.cs:line 41
+   at AssetManagement.API.DAL.Services.UsersService.UsersService.CreateAsync(UsersCreateRequest request, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\DAL\Services\UsersService\UsersService.cs:line 47
+   at AssetManagement.API.Controllers.UsersController.Create(UsersCreateRequest request, CancellationToken cancellationToken) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\Controllers\UsersController.cs:line 54
+   at lambda_method673(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at AssetManagement.API.Middleware.InstitutionContextMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\Middleware\InstitutionContextMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AssetManagement.API.Middleware.GlobalExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\Backend_API\AssetManagement\AssetManagement.API\Middleware\GlobalExceptionHandlerMiddleware.cs:line 14
+2025-11-27 08:41:37.752 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 08:41:37.784 +00:00 [INF] Subscription background service started at "2025-11-27T08:41:37.7843107Z" (User: , Inst: )
+2025-11-27 08:41:38.626 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 08:41:38.758 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 08:41:38.948 +00:00 [INF] Subscription check completed at "2025-11-27T08:41:38.9488954Z" (User: , Inst: )
+2025-11-27 08:41:39.074 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 08:41:39.077 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 08:41:39.078 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 09:38:51.318 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 09:38:51.398 +00:00 [INF] Subscription background service started at "2025-11-27T09:38:51.3973701Z" (User: , Inst: )
+2025-11-27 09:38:54.733 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 09:39:22.608 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 09:39:22.901 +00:00 [INF] Subscription check completed at "2025-11-27T09:39:22.9015977Z" (User: , Inst: )
+2025-11-27 09:39:29.340 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 09:39:31.265 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 09:39:32.467 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 09:39:48.953 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 09:39:48.984 +00:00 [INF] Subscription background service started at "2025-11-27T09:39:48.9838254Z" (User: , Inst: )
+2025-11-27 09:39:49.985 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 09:39:50.145 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 09:39:50.233 +00:00 [INF] Subscription check completed at "2025-11-27T09:39:50.2338054Z" (User: , Inst: )
+2025-11-27 09:39:50.363 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 09:39:50.365 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 09:39:50.366 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 10:19:25.972 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 10:19:26.086 +00:00 [INF] Subscription background service started at "2025-11-27T10:19:26.0854915Z" (User: , Inst: )
+2025-11-27 10:19:27.388 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 10:19:27.579 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 10:19:27.681 +00:00 [INF] Subscription check completed at "2025-11-27T10:19:27.6812410Z" (User: , Inst: )
+2025-11-27 10:19:27.786 +00:00 [INF] Querying health. (User: anonymous, Inst: none)
+2025-11-27 10:19:27.787 +00:00 [INF] Health action queried successfully. (User: anonymous, Inst: none)
+2025-11-27 10:19:27.818 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 10:19:27.821 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 10:19:27.822 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 11:59:15.370 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 11:59:15.419 +00:00 [INF] Subscription background service started at "2025-11-27T11:59:15.4186842Z" (User: , Inst: )
+2025-11-27 11:59:16.486 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 11:59:16.657 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 11:59:16.752 +00:00 [INF] Subscription check completed at "2025-11-27T11:59:16.7529456Z" (User: , Inst: )
+2025-11-27 11:59:16.884 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 11:59:16.887 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 11:59:16.888 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 12:05:00.239 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 12:05:00.313 +00:00 [INF] Subscription background service started at "2025-11-27T12:05:00.3119329Z" (User: , Inst: )
+2025-11-27 12:05:02.559 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 12:05:10.853 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 12:05:11.331 +00:00 [INF] Subscription check completed at "2025-11-27T12:05:11.3317181Z" (User: , Inst: )
+2025-11-27 12:05:12.879 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 12:05:12.888 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 12:05:12.892 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 12:09:15.412 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 12:09:15.476 +00:00 [INF] Subscription background service started at "2025-11-27T12:09:15.4757925Z" (User: , Inst: )
+2025-11-27 12:09:17.603 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 12:09:25.194 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 12:09:25.498 +00:00 [INF] Subscription check completed at "2025-11-27T12:09:25.4988153Z" (User: , Inst: )
+2025-11-27 12:09:25.862 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 12:09:25.870 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 12:09:25.874 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 12:12:35.368 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 12:12:35.427 +00:00 [INF] Subscription background service started at "2025-11-27T12:12:35.4264462Z" (User: , Inst: )
+2025-11-27 12:12:37.589 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 12:12:38.361 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 12:12:38.770 +00:00 [INF] Subscription check completed at "2025-11-27T12:12:38.7709267Z" (User: , Inst: )
+2025-11-27 12:12:39.195 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 12:12:39.223 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 12:12:39.226 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 12:29:41.512 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 12:29:41.577 +00:00 [INF] Subscription background service started at "2025-11-27T12:29:41.5766046Z" (User: , Inst: )
+2025-11-27 12:29:43.632 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 12:29:44.220 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 12:29:44.523 +00:00 [INF] Subscription check completed at "2025-11-27T12:29:44.5235969Z" (User: , Inst: )
+2025-11-27 12:29:44.853 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 12:29:44.902 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 12:29:44.909 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 13:17:35.245 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 13:17:35.284 +00:00 [INF] Subscription background service started at "2025-11-27T13:17:35.2844703Z" (User: , Inst: )
+2025-11-27 13:17:36.123 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 13:17:36.297 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 13:17:36.383 +00:00 [INF] Subscription check completed at "2025-11-27T13:17:36.3837324Z" (User: , Inst: )
+2025-11-27 13:17:36.540 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 13:17:36.543 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 13:17:36.545 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 13:17:55.607 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 13:17:55.687 +00:00 [INF] Subscription background service started at "2025-11-27T13:17:55.6864814Z" (User: , Inst: )
+2025-11-27 13:17:58.092 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 13:17:58.912 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 13:17:59.223 +00:00 [INF] Subscription check completed at "2025-11-27T13:17:59.2234122Z" (User: , Inst: )
+2025-11-27 13:17:59.547 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 13:17:59.587 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 13:17:59.592 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 13:58:18.871 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 13:58:18.939 +00:00 [INF] Subscription background service started at "2025-11-27T13:58:18.9383012Z" (User: , Inst: )
+2025-11-27 13:58:21.283 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 13:58:21.923 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 13:58:22.300 +00:00 [INF] Subscription check completed at "2025-11-27T13:58:22.3005480Z" (User: , Inst: )
+2025-11-27 13:58:22.599 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 13:58:22.609 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 13:58:22.614 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 13:59:03.824 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 13:59:03.888 +00:00 [INF] Subscription background service started at "2025-11-27T13:59:03.8875379Z" (User: , Inst: )
+2025-11-27 13:59:05.796 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 13:59:06.316 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 13:59:06.660 +00:00 [INF] Subscription check completed at "2025-11-27T13:59:06.6604010Z" (User: , Inst: )
+2025-11-27 13:59:06.962 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 13:59:06.970 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 13:59:06.972 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 14:02:07.175 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 14:02:07.243 +00:00 [INF] Subscription background service started at "2025-11-27T14:02:07.2423973Z" (User: , Inst: )
+2025-11-27 14:02:09.609 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 14:02:10.162 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 14:02:10.493 +00:00 [INF] Subscription check completed at "2025-11-27T14:02:10.4934374Z" (User: , Inst: )
+2025-11-27 14:02:10.787 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 14:02:10.793 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 14:02:10.796 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
+2025-11-27 14:05:44.278 +00:00 [INF] 🚀 Starting AssetManagement API... (User: , Inst: )
+2025-11-27 14:05:44.317 +00:00 [INF] Subscription background service started at "2025-11-27T14:05:44.3174302Z" (User: , Inst: )
+2025-11-27 14:05:45.169 +00:00 [INF] Subscription & Maintenance Background Service started. (User: , Inst: )
+2025-11-27 14:05:45.461 +00:00 [WRN] Failed to determine the https port for redirect. (User: anonymous, Inst: none)
+2025-11-27 14:05:45.565 +00:00 [INF] Subscription check completed at "2025-11-27T14:05:45.5656204Z" (User: , Inst: )
+2025-11-27 14:05:45.720 +00:00 [INF] Updated depreciation for asset Practical Wooden Bike: current value ¤4,260.71 (User: , Inst: )
+2025-11-27 14:05:45.722 +00:00 [INF] Updated depreciation for asset Awesome Steel Pants: current value ¤2,539.76 (User: , Inst: )
+2025-11-27 14:05:45.723 +00:00 [INF] Updated depreciation for asset Fantastic Plastic Ball: current value ¤3,501.17 (User: , Inst: )
