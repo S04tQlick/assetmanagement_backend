@@ -33,7 +33,7 @@ public class AssetTypeOperations(ApplicationFixture fixture)
         var assetTypes = TestOperations.Deserialize<IEnumerable<AssetTypesResponse>>(content);
 
         return assetTypes?.Any(a => 
-            string.Equals(a.AssetTypeName?.Trim().ToLower(), name?.Trim().ToLower(), StringComparison.OrdinalIgnoreCase)
+            string.Equals(a.AssetTypeName?.Trim().ToLower(), name.Trim().ToLower(), StringComparison.OrdinalIgnoreCase)
         ) ?? false;
     }
 }

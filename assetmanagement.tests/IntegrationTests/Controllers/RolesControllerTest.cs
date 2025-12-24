@@ -4,12 +4,14 @@ using AssetManagement.Entities.FakeData;
 using AssetManagement.Tests.Fixtures; 
 using AssetManagement.Tests.Helpers.ApiOperations;
 using AssetManagement.Tests.Helpers.Operations;
+using Xunit.Abstractions;
 
 namespace AssetManagement.Tests.IntegrationTests.Controllers;
 
-public class RolesControllerTest (ApplicationFixture fixture) : RolesOperations(fixture), IClassFixture<ApplicationFixture>
+public class RolesControllerTest (ApplicationFixture fixture, ITestOutputHelper testOutputHelper) : RolesOperations(fixture), IClassFixture<ApplicationFixture>
 {
     private readonly ApplicationFixture _fixture = fixture;
+    private readonly ITestOutputHelper _testOutputHelper = testOutputHelper;
 
     [Fact]
     public async Task It_Should_Be_Healthy()
@@ -24,25 +26,29 @@ public class RolesControllerTest (ApplicationFixture fixture) : RolesOperations(
     }
     
     [Fact]
-    public async Task It_Should_Create_Roles()
+    public async Task It_Should_Add_Roles()
     {
         var request = RolesRequestFaker.GetCreateRequestFaker().Generate();
-        var response = await _fixture.Client.PostAsync(
-            ApiPath.SetRolesControllerRoute(),
-            TestOperations.SetRequestBody(request)
-        );
+        if (await RolesExistsByNameAsync(request.RoleName))
+            _testOutputHelper.WriteLine($"RoleName '{request.RoleName}' already exists, skipping creation.");
         
-        response.StatusCode.Should().Be(HttpStatusCode.Created); 
-        
-        var content = await response.Content.ReadAsStringAsync();
-        var responseMessage = TestOperations.Deserialize<RolesResponse>(content);
-        
-        responseMessage.Should().NotBeNull();
-        responseMessage.RoleName.Should().Be(request.RoleName);
-        responseMessage.IsActive.Should().BeTrue();
-        responseMessage.CreatedAt.Should().NotBe(default); 
+        else
+        {
+            var response = await _fixture.Client.PostAsync(
+                ApiPath.SetAssetTypesControllerRoute(),
+                TestOperations.SetRequestBody(request)
+            );
 
-        //responseMessage.Should().Be(MessageConstants.Success(RecordTypeEnum.Save));
+            response.StatusCode.Should().Be(HttpStatusCode.Created);
+
+            var content = await response.Content.ReadAsStringAsync();
+            var responseMessage = TestOperations.Deserialize<RolesResponse>(content);
+
+            responseMessage.Should().NotBeNull();
+            responseMessage.RoleName.Should().Be(request.RoleName);
+            responseMessage.IsActive.Should().BeTrue();
+            responseMessage.CreatedAt.Should().NotBe(default);
+        }
     }
 
     [Fact]

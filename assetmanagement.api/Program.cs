@@ -1,6 +1,6 @@
 using AssetManagement.API.Extentions.ProgramExtention; 
 
-DotNetEnv.Env.Load();
+DotNetEnv  .Env.Load();
 
 var builder = WebApplication.CreateBuilder(args);
 

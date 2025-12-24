@@ -12,7 +12,6 @@ public static class AppServiceExtentionCollection
         app.UseLoggingContext();
         app.UseGlobalExceptionHandler();
 
-        // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {
             app.MapOpenApi();
@@ -27,6 +26,7 @@ public static class AppServiceExtentionCollection
         
         app.UseHttpsRedirection();
         app.MapControllers();
+        app.Run();
         
         try
         {

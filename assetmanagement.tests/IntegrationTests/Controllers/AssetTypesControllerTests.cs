@@ -2,7 +2,6 @@ using AssetManagement.API.Constants;
 using AssetManagement.Entities.DTOs.Responses;
 using AssetManagement.Entities.FakeData;
 using AssetManagement.Tests.Fixtures;
-using AssetManagement.Tests.Helpers;
 using AssetManagement.Tests.Helpers.ApiOperations;
 using AssetManagement.Tests.Helpers.Operations;
 using Microsoft.AspNetCore.Mvc;
@@ -13,9 +12,8 @@ namespace AssetManagement.Tests.IntegrationTests.Controllers;
 public class AssetTypesControllerTests(ApplicationFixture fixture, ITestOutputHelper testOutputHelper)
     : AssetTypeOperations(fixture), IClassFixture<ApplicationFixture>
 {
-    private readonly ApplicationFixture _fixture = fixture;
+    private readonly ApplicationFixture _fixture = fixture; 
     private readonly ITestOutputHelper _testOutputHelper = testOutputHelper;
- 
 
     [Fact]
     public async Task It_Should_Be_Healthy()
@@ -54,22 +52,6 @@ public class AssetTypesControllerTests(ApplicationFixture fixture, ITestOutputHe
             responseMessage.CreatedAt.Should().NotBe(default);
         }
     }
-
-    // [Fact]
-    // public async Task It_Should_Get_AssetTypes_By_Date()
-    // {
-    //     var assetTypesData = await GetAssetTypeByDateAsync(DateTime.UtcNow.ToString("o"));
-    //
-    //     if (assetTypesData is not null)
-    //     {
-    //         foreach (var row in assetTypesData)
-    //         {
-    //             row.Id.Should().NotBeEmpty();
-    //             row.AssetTypeName.Should().NotBeEmpty();
-    //             row.IsActive.Should().BeTrue();
-    //         }
-    //     }
-    // }
 
     [Fact]
     public async Task It_Should_Return_NotFound_By_Incorrect_RowId()

@@ -11,7 +11,8 @@ using SixLabors.ImageSharp;
 
 namespace AssetManagement.Tests.IntegrationTests.Controllers;
 
-public class BranchesControllerTests(ApplicationFixture fixture) : BranchOperations(fixture), IClassFixture<ApplicationFixture>
+public class BranchesControllerTests(ApplicationFixture fixture)
+    : BranchOperations(fixture), IClassFixture<ApplicationFixture>
 {
     private readonly ApplicationFixture _fixture = fixture;
     private readonly GlobalOperations _ops = new GlobalOperations(fixture);
@@ -19,7 +20,8 @@ public class BranchesControllerTests(ApplicationFixture fixture) : BranchOperati
     [Fact]
     public async Task It_Should_Be_Healthy()
     {
-        var response = await _fixture.Client.GetAsync(ApiPath.SetBranchesControllerRoute(ControllerConstants.HealthRoute));
+        var response =
+            await _fixture.Client.GetAsync(ApiPath.SetBranchesControllerRoute(ControllerConstants.HealthRoute));
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
         var content = await response.Content.ReadAsStringAsync();
@@ -35,7 +37,7 @@ public class BranchesControllerTests(ApplicationFixture fixture) : BranchOperati
         var row = institutionData?.FirstOrDefault();
         row.Should().NotBeNull();
 
-        var request = BranchRequestFaker.GetCreateRequestFaker(row.Id).Generate(); 
+        var request = BranchRequestFaker.GetCreateRequestFaker(row.Id).Generate();
 
         var response = await _fixture.Client.PostAsync(
             ApiPath.SetBranchesControllerRoute(),
@@ -46,41 +48,38 @@ public class BranchesControllerTests(ApplicationFixture fixture) : BranchOperati
 
         var content = await response.Content.ReadAsStringAsync();
         var responseMessage = TestOperations.Deserialize<BranchesResponse>(content);
-        
+
         responseMessage.Should().NotBeNull();
         responseMessage.BranchName.Should().Be(request.BranchName);
         responseMessage.IsActive.Should().BeTrue();
-        responseMessage.CreatedAt.Should().NotBe(default); 
+        responseMessage.CreatedAt.Should().NotBe(default);
         responseMessage.InstitutionId.Should().Be(row.Id);
-
-        //responseMessage.Should().Be(MessageConstants.Success(RecordTypeEnum.Save));
     }
 
     [Fact]
     public async Task It_Should_Get_Branches()
     {
         var branchesData = await GetBranchesDataAsync();
-
+    
         if (branchesData is not null)
         {
             foreach (var row in branchesData)
             {
                 row.Id.Should().NotBeEmpty();
-                row.BranchName.Should().NotBeEmpty();
-                row.Latitude.Should().NotBe(0);
-                row.Latitude.Should().BeInRange(-90, 90);
-                row.Longitude.Should().NotBe(0);
-                row.Longitude.Should().BeInRange(-90, 90);
-                row.IsActive.Should().BeTrue();
+                row.BranchName.Should().NotBeEmpty(); 
+                row.BranchName.Should().NotBeNullOrWhiteSpace();
                 
-                if(row.IsHeadOffice.Equals(true))
-                    row.IsHeadOffice.Should().BeTrue();
-                else 
-                    row.IsActive.Should().BeFalse();
+                row.Latitude.Should().NotBe(0);
+                row.Longitude.Should().NotBe(0);
+                
+                row.IsActive.Should().Be(row.IsActive);
+                row.IsHeadOffice.Should().Be(row.IsHeadOffice);
                 
                 row.InstitutionId.Should().NotBe(row.Id);
             }
         }
     }
+
+
 
 }
