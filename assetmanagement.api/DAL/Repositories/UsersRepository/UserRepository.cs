@@ -2,11 +2,10 @@ using AssetManagement.API.DAL.DatabaseContext;
 using AssetManagement.API.DAL.QueryHandlers.RepositoryQueryHandler;
 using AssetManagement.Entities.Models;
 
-namespace AssetManagement.API.DAL.Repositories.UsersRepository;
-
-public class UserRepository(ApplicationDbContext context) : RepositoryQueryHandler<UsersModel>(context), IUserRepository
+namespace AssetManagement.API.DAL.Repositories.UsersRepository; 
+public class UserRepository(ApplicationDbContext ctx) : RepositoryQueryHandler<UsersModel>(ctx), IUserRepository
 {
-    private readonly ApplicationDbContext _context = context;
+    private readonly ApplicationDbContext _context = ctx;
 
     public async Task<UsersModel?> GetByEmailAsync(string email) =>
         await _context.UsersModel
@@ -14,10 +13,5 @@ public class UserRepository(ApplicationDbContext context) : RepositoryQueryHandl
 
     public async Task<UsersModel?> GetUserByIdAndInstitutionIdAsync(Guid institutionId,  Guid userId) =>
         await _context.UsersModel
-            .FirstOrDefaultAsync(u => (u.InstitutionId == institutionId)  && (u.Id == userId));
-
-    public async Task<IEnumerable<UsersModel>> GetByInstitutionIdAsync(Guid institutionId) =>
-        await _context.UsersModel
-            .Where(iu => iu.InstitutionId == institutionId)
-            .ToListAsync();
+            .FirstOrDefaultAsync(u => (u.InstitutionId == institutionId)  && (u.Id == userId)); 
 }

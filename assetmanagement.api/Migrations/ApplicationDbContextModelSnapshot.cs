@@ -283,6 +283,35 @@ namespace AssetManagement.API.Migrations
                     b.ToTable("Branches");
                 });
 
+            modelBuilder.Entity("AssetManagement.Entities.Models.FileUploadsModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("InstitutionId")
+                        .HasColumnType("uuid");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("S3Key")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("InstitutionId");
+
+                    b.ToTable("FileUploads");
+                });
+
             modelBuilder.Entity("AssetManagement.Entities.Models.InstitutionsModel", b =>
                 {
                     b.Property<Guid>("Id")
@@ -737,6 +766,17 @@ namespace AssetManagement.API.Migrations
                     b.Navigation("Institutions");
                 });
 
+            modelBuilder.Entity("AssetManagement.Entities.Models.FileUploadsModel", b =>
+                {
+                    b.HasOne("AssetManagement.Entities.Models.InstitutionsModel", "Institutions")
+                        .WithMany()
+                        .HasForeignKey("InstitutionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Institutions");
+                });
+
             modelBuilder.Entity("AssetManagement.Entities.Models.MaintenanceLogsModel", b =>
                 {
                     b.HasOne("AssetManagement.Entities.Models.AssetsModel", "Asset")
@@ -745,7 +785,7 @@ namespace AssetManagement.API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AssetManagement.Entities.Models.InstitutionsModel", "Institution")
+                    b.HasOne("AssetManagement.Entities.Models.InstitutionsModel", "Institutions")
                         .WithMany("MaintenanceLogs")
                         .HasForeignKey("InstitutionId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -753,7 +793,7 @@ namespace AssetManagement.API.Migrations
 
                     b.Navigation("Asset");
 
-                    b.Navigation("Institution");
+                    b.Navigation("Institutions");
                 });
 
             modelBuilder.Entity("AssetManagement.Entities.Models.MaintenancesModel", b =>
@@ -764,7 +804,7 @@ namespace AssetManagement.API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AssetManagement.Entities.Models.InstitutionsModel", "Institution")
+                    b.HasOne("AssetManagement.Entities.Models.InstitutionsModel", "Institutions")
                         .WithMany()
                         .HasForeignKey("InstitutionId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -776,20 +816,20 @@ namespace AssetManagement.API.Migrations
 
                     b.Navigation("Asset");
 
-                    b.Navigation("Institution");
+                    b.Navigation("Institutions");
 
                     b.Navigation("Vendor");
                 });
 
             modelBuilder.Entity("AssetManagement.Entities.Models.SubscriptionsModel", b =>
                 {
-                    b.HasOne("AssetManagement.Entities.Models.InstitutionsModel", "Institution")
+                    b.HasOne("AssetManagement.Entities.Models.InstitutionsModel", "Institutions")
                         .WithOne("Subscription")
                         .HasForeignKey("AssetManagement.Entities.Models.SubscriptionsModel", "InstitutionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Institution");
+                    b.Navigation("Institutions");
                 });
 
             modelBuilder.Entity("AssetManagement.Entities.Models.UserRolesModel", b =>

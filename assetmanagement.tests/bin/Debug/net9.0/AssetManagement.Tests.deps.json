@@ -382,6 +382,48 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "AWSSDK.Core/4.0.3.6": {
+        "runtime": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.3.6"
+          }
+        },
+        "compile": {
+          "lib/net8.0/AWSSDK.Core.dll": {}
+        }
+      },
+      "AWSSDK.Extensions.NETCore.Setup/4.0.3.17": {
+        "dependencies": {
+          "AWSSDK.Core": "4.0.3.6",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.3.17"
+          }
+        },
+        "compile": {
+          "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll": {}
+        }
+      },
+      "AWSSDK.S3/4.0.16.1": {
+        "dependencies": {
+          "AWSSDK.Core": "4.0.3.6"
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.S3.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.16.1"
+          }
+        },
+        "compile": {
+          "lib/net8.0/AWSSDK.S3.dll": {}
+        }
+      },
       "BCrypt.Net-Next/4.0.3": {
         "runtime": {
           "lib/net6.0/BCrypt.Net-Next.dll": {
@@ -2522,6 +2564,8 @@
       "xunit.runner.visualstudio/2.8.2": {},
       "AssetManagement.API/1.0.0": {
         "dependencies": {
+          "AWSSDK.Extensions.NETCore.Setup": "4.0.3.17",
+          "AWSSDK.S3": "4.0.16.1",
           "AssetManagement.Entities": "1.0.0",
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
@@ -2561,6 +2605,7 @@
       },
       "AssetManagement.Entities/1.0.0": {
         "dependencies": {
+          "AWSSDK.Core": "4.0.3.6",
           "AutoMapper": "12.0.1",
           "Bogus": "35.6.5",
           "Microsoft.AspNetCore.Http": "2.3.0"
@@ -4390,6 +4435,27 @@
       "sha512": "sha512-+g/K+Vpe3gGMKGzjslMOdqNlkikScDjWfVvmWTayrDHaG/n2pPmFBMa+jKX1r/h6BDGFdkyRjAuhFE3ykW+r1g==",
       "path": "automapper.extensions.microsoft.dependencyinjection/12.0.1",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512"
+    },
+    "AWSSDK.Core/4.0.3.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bx61NSP9bQ5BTPXGzyhS7f4d+YzIiSelsblj8JALHp5uoYKVRnoRTbWb3lyUTdzJ9UZj7Q7JiQ8sJJ5JHQ5Jrg==",
+      "path": "awssdk.core/4.0.3.6",
+      "hashPath": "awssdk.core.4.0.3.6.nupkg.sha512"
+    },
+    "AWSSDK.Extensions.NETCore.Setup/4.0.3.17": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VntitFofL51fkVFxA9IspAvddFFTe2mHzK37EncEItOLH45TUNmBPHWhvKsHTZ1fAXQdR4pcArx9skVjx9/M5A==",
+      "path": "awssdk.extensions.netcore.setup/4.0.3.17",
+      "hashPath": "awssdk.extensions.netcore.setup.4.0.3.17.nupkg.sha512"
+    },
+    "AWSSDK.S3/4.0.16.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LYqhlD/2ragWo7WHwQOjPLSXn3BuFa2gf+/0eIqSUknwdJLGRNyXdhaSUVvqUDsAVkkQu455X+Oknk/lqCJx9A==",
+      "path": "awssdk.s3/4.0.16.1",
+      "hashPath": "awssdk.s3.4.0.16.1.nupkg.sha512"
     },
     "BCrypt.Net-Next/4.0.3": {
       "type": "package",

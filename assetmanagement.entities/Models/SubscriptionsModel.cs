@@ -1,11 +1,15 @@
+using AssetManagement.Entities.GeneralResponse;
+
 namespace AssetManagement.Entities.Models;
 
 [Table("Subscriptions")]
-public class SubscriptionsModel : BaseModel
+public class SubscriptionsModel : BaseModel, IInstitutionOwned
 {
     [Required]
-    [ForeignKey(nameof(Institution))]
     public Guid InstitutionId { get; set; }
+    
+    [ForeignKey(nameof (InstitutionId))]
+    public InstitutionsModel? Institutions { get; set; }
 
     public string? SubscriptionPlan { get; set; }
     
@@ -23,5 +27,4 @@ public class SubscriptionsModel : BaseModel
     
     [MaxLength(500)]
     public string? Notes { get; set; }
-    public InstitutionsModel? Institution { get; set; }
 }

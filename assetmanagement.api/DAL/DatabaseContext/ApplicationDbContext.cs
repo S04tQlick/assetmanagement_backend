@@ -20,6 +20,7 @@ public class ApplicationDbContext(
 
     public DbSet<UserRolesModel> UserRolesModel { get; set; }
     public DbSet<AddressesModel> AddressesModel { get; set; }
+    public DbSet<FileUploadsModel> FileUploadsModel { get; set; }
 
 
 

@@ -1,4 +1,5 @@
 using System.Text;
+using Amazon.S3;
 using AssetManagement.API.DAL.DatabaseContext;
 using AssetManagement.API.DAL.Infrastructure;
 using AssetManagement.API.DAL.Services.TokenService;
@@ -12,7 +13,7 @@ using StackExchange.Redis;
 namespace AssetManagement.API.Extentions.ProgramExtention;
 
 public static class AddDbContextExtensionCollection
-{ 
+{
     public static void AddDbContext(this IServiceCollection services)
     {
         services.AddHttpContextAccessor();
@@ -37,15 +38,16 @@ public static class AddDbContextExtensionCollection
             ConnectionMultiplexer.Connect(ReturnHelpers.Env("ASSET_MGMT_REDIS_CONNECTION_STRING")!));
         services.AddSignalR()
             .AddStackExchangeRedis(
-                ReturnHelpers.Env("ASSET_MGMT_REDIS_CONNECTION_STRING") ?? throw new Exception("ASSET_MGMT_REDIS_CONNECTION_STRING Missing"),
+                ReturnHelpers.Env("ASSET_MGMT_REDIS_CONNECTION_STRING") ??
+                throw new Exception("ASSET_MGMT_REDIS_CONNECTION_STRING Missing"),
                 options =>
                     options.Configuration.ChannelPrefix = new RedisChannel("ASMS", RedisChannel.PatternMode.Literal));
-        
+
         services.AddScoped<ITokenService, TokenService>();
-        
-        
+
+
         // EMAIL
-        services.Configure<EmailSettings>(options =>
+        services.Configure<EmailSettingsModel>(options =>
         {
             options.SmtpServer = ReturnHelpers.Env("EMAIL_SMTP_SERVER");
             options.Port = int.Parse(ReturnHelpers.Env("EMAIL_SMTP_PORT"));
@@ -55,7 +57,7 @@ public static class AddDbContextExtensionCollection
             options.Password = ReturnHelpers.Env("EMAIL_PASSWORD");
             options.UseSsl = bool.Parse(ReturnHelpers.Env("EMAIL_USE_SSL"));
         });
-        
+
         // Authentication
         services.AddAuthentication(options =>
             {
@@ -94,6 +96,35 @@ public static class AddDbContextExtensionCollection
                     }
                 };
             });
+
+        services.AddSingleton(sp =>
+        {
+            var settings = new AwsSettingsModel
+            {
+                BucketName = ReturnHelpers.Env("AWS_BUCKET_NAME")!,
+                Region = ReturnHelpers.Env("AWS_REGION")!,
+                AccessKey = ReturnHelpers.Env("AWS_ACCESS_KEY_ID")!,
+                SecretKey = ReturnHelpers.Env("AWS_SECRET_ACCESS_KEY")!,
+                BucketDirectory = ReturnHelpers.Env("AWS_BUCKET_DIRECTORY")!
+            };
+
+            if (string.IsNullOrWhiteSpace(settings.AccessKey) ||
+                string.IsNullOrWhiteSpace(settings.SecretKey) ||
+                string.IsNullOrWhiteSpace(settings.Region) ||
+                string.IsNullOrWhiteSpace(settings.BucketName))
+            {
+                throw new Exception("AWS environment variables are missing");
+            }
+
+            return settings;
+        });
+
+        services.AddSingleton<IAmazonS3>(sp =>
+        {
+            var settings = sp.GetRequiredService<AwsSettingsModel>();
+            var region = Amazon.RegionEndpoint.GetBySystemName(settings.Region);
+            return new AmazonS3Client(settings.AccessKey, settings.SecretKey, region);
+        });
 
         services.AddAuthorization();
     }

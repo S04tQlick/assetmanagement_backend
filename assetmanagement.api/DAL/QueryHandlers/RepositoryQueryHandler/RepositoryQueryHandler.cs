@@ -1,12 +1,13 @@
 using System.Linq.Expressions;
 using AssetManagement.API.DAL.DatabaseContext;
+using AssetManagement.Entities.GeneralResponse;
 using AssetManagement.Entities.Models; 
 
 namespace AssetManagement.API.DAL.QueryHandlers.RepositoryQueryHandler;
 
 public class RepositoryQueryHandler<TEntity>(ApplicationDbContext ctx) : IRepositoryQueryHandler<TEntity> where TEntity : BaseModel
 {
-    public virtual async Task<IEnumerable<TEntity>> GetAllAsync(params Expression<Func<TEntity, object>>[]? includes)
+    public async Task<IEnumerable<TEntity>> GetAllAsync(params Expression<Func<TEntity, object>>[]? includes)
     {
         IQueryable<TEntity> query = ctx.Set<TEntity>();
         
@@ -16,7 +17,7 @@ public class RepositoryQueryHandler<TEntity>(ApplicationDbContext ctx) : IReposi
         return await query.ToListAsync();
     }
 
-    public virtual async Task<TEntity?> GetByIdAsync(Guid id, params Expression<Func<TEntity, object>>[]? includes)
+    public async Task<TEntity?> GetByIdAsync(Guid id, params Expression<Func<TEntity, object>>[]? includes)
     {
         IQueryable<TEntity> query = ctx.Set<TEntity>();
 
@@ -26,7 +27,18 @@ public class RepositoryQueryHandler<TEntity>(ApplicationDbContext ctx) : IReposi
         return await query.FirstOrDefaultAsync(e => e.Id == id);
     }
 
-    public virtual async Task<IEnumerable<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate,
+    public async Task<IEnumerable<TEntity>> GetByInstitutionIdAsync(Guid institutionId)
+    {
+        if (!typeof(IInstitutionOwned).IsAssignableFrom(typeof(TEntity)))
+            throw new InvalidOperationException(
+                $"{typeof(TEntity).Name} does not implement {nameof(IInstitutionOwned)}");
+
+        return await ctx.Set<TEntity>()
+            .Where(e => ((IInstitutionOwned)e).InstitutionId == institutionId)
+            .ToListAsync();
+    }
+
+    public async Task<IEnumerable<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate,
         params Expression<Func<TEntity, object>>[]? includes)
     {
         IQueryable<TEntity> query = ctx.Set<TEntity>(); 
@@ -36,22 +48,22 @@ public class RepositoryQueryHandler<TEntity>(ApplicationDbContext ctx) : IReposi
         return await query.Where(predicate).ToListAsync();
     }
 
-    public virtual async Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> predicate) => 
+    public async Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> predicate) => 
         await ctx.Set<TEntity>().AnyAsync(predicate);
 
-    public virtual async Task<int> CreateAsync(TEntity entity)
+    public async Task<int> CreateAsync(TEntity entity)
     {
         ctx.Set<TEntity>().Add(entity);
         return await ctx.SaveChangesAsync();
     }
 
-    public virtual async Task<int> UpdateAsync(TEntity entity)
+    public async Task<int> UpdateAsync(TEntity entity)
     {
         ctx.Set<TEntity>().Update(entity);
         return await ctx.SaveChangesAsync();
     }
 
-    public virtual async Task<int> DeleteAsync(Guid id)
+    public async Task<int> DeleteAsync(Guid id)
     {
         var entity = await ctx.Set<TEntity>().FindAsync(id);
         if (entity == null) return 0;

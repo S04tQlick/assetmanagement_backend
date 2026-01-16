@@ -11,7 +11,7 @@ public class MaintenanceLogsMappingProfile : Profile
     {
         CreateMap<MaintenanceLogsModel, MaintenanceLogsResponse>()
             .ForMember(dest => dest.AssetName, opt => opt.MapFrom(src => src.Asset!.AssetName))
-            .ForMember(dest => dest.InstitutionName, opt => opt.MapFrom(src => src.Institution!.InstitutionName));
+            .ForMember(dest => dest.InstitutionName, opt => opt.MapFrom(src => src.Institutions!.InstitutionName));
 
         CreateMap<MaintenanceLogsRequest.MaintenanceLogsCreateRequest, MaintenanceLogsModel>();
         CreateMap<MaintenanceLogsRequest.MaintenanceLogUpdateRequest, MaintenanceLogsModel>();

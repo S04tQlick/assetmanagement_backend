@@ -4,5 +4,5 @@ namespace AssetManagement.Entities.DTOs.Requests;
 
 public class SanityUploadRequest
 {
-    public IFormFile? File  { get; set; }
+    public required IFormFile File  { get; set; }
 }

@@ -5,27 +5,27 @@ public class AddressesModel : BaseModel
 {
     [Required]
     [MaxLength(100)]
-    public string Street { get; set; } = default!;
+    public required string Street { get; set; }
 
     [Required]
     [MaxLength(50)]
-    public string City { get; set; } = default!;
+    public required string City { get; set; }
 
     [Required]
     [MaxLength(50)]
-    public string State { get; set; } = default!;
+    public required string State { get; set; }
 
     [Required]
     [MaxLength(20)]
-    public string PostalCode { get; set; } = default!;
+    public string? PostalCode { get; set; }
 
     [Required]
     [MaxLength(50)]
-    public string Region { get; set; } = default!;
+    public required string Region { get; set; }
 
     [Required]
     [MaxLength(50)]
-    public string Country { get; set; } = default!; 
+    public required string Country { get; set; }
 
     // Navigation property (if tied to Asset, Vendor, or User)
     public Guid? QueryId { get; set; }

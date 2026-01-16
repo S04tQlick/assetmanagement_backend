@@ -961,3 +961,6 @@ C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Managemen
 C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.Tests\bin\Debug\net9.0\MediatR.Contracts.dll
 C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.Tests\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.Tests\obj\Debug\net9.0\AssetManagement.Tests.sourcelink.json
+C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.Tests\bin\Debug\net9.0\AWSSDK.Core.dll
+C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.Tests\bin\Debug\net9.0\AWSSDK.Extensions.NETCore.Setup.dll
+C:\Users\sammi\PROJECTS\PERSONAL\JET_BRAINS\FAST_TRACK_SERVICES\Assets_Management\FrontEnd_and_BackEnd\assetmanagement_backend\AssetManagement.Tests\bin\Debug\net9.0\AWSSDK.S3.dll

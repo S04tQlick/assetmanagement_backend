@@ -5,10 +5,9 @@ using AssetManagement.Entities.Models;
 
 namespace AssetManagement.API.DAL.Services.UsersService;
 
-public interface IUsersService : IServiceQueryHandler<UsersModel, UsersResponse, UsersCreateRequest, UsersUpdateRequest>
-{
-    HealthResponse GetHealth();
-    Task<IEnumerable<UsersResponse>> GetByInstitutionIdAsync(Guid institutionId);
-    Task<IEnumerable<UsersResponse>> GetActiveUsersAsync();
-    Task<UsersResponse?> GetByEmailAsync(string email);
-}
+public interface
+    IUsersService : IServiceQueryHandler<UsersModel, UsersResponse, UsersCreateRequest, UsersUpdateRequest>;
+// { 
+//     Task<IEnumerable<UsersResponse>> GetActiveUsersAsync();
+//     Task<UsersResponse?> GetByEmailAsync(string email);
+// } 

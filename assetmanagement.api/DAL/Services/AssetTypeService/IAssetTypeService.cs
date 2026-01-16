@@ -5,8 +5,4 @@ using AssetManagement.Entities.Models;
 
 namespace AssetManagement.API.DAL.Services.AssetTypeService;
 
-public interface IAssetTypeService : IServiceQueryHandler<AssetTypesModel, AssetTypesResponse, AssetTypesCreateRequest, AssetTypesUpdateRequest>
-{
-    HealthResponse GetHealth();
-    Task<IEnumerable<AssetTypesResponse>> GetActiveAssetTypesAsync();
-}
+public interface IAssetTypeService : IServiceQueryHandler<AssetTypesModel, AssetTypesResponse, AssetTypesCreateRequest, AssetTypesUpdateRequest>;

@@ -18,7 +18,7 @@ public class SubscriptionMappingProfile : Profile
         CreateMap<SubscriptionsModel, SubscriptionsResponse>()
             .ForMember(
                 dest => dest.InstitutionName,
-                opt => opt.MapFrom(src => src.Institution!.InstitutionName)
+                opt => opt.MapFrom(src => src.Institutions!.InstitutionName)
             );
     }
 }
