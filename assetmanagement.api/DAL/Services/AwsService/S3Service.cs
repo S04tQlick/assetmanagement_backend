@@ -18,9 +18,9 @@ public class S3Service(IS3Repository s3Repo) : IS3Service
         return await s3Repo.ListAsync();
     }
 
-    public async Task<GetObjectResponse> GetByIdAsync(string key)
+    public async Task<GetObjectResponse> GetByIdAsync(string key, bool isLogo)
     {
-        return await s3Repo.GetByIdAsync(key);
+        return await s3Repo.GetByIdAsync(key, isLogo);
     }
 
     public async Task<string> UpdateAsync(string key, IFormFile file, bool isLogo)

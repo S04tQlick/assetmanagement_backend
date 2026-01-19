@@ -29,7 +29,7 @@ public class FileUploadService(IFileUploadRepository repository, IS3Service s3, 
         if (existing is null) 
             throw new NotFoundException($"File with id '{id}' not found.");
         
-        return await s3.GetByIdAsync(existing.S3Key);
+        return await s3.GetByIdAsync(existing.S3Key, existing.IsLogo);
     }
 
     public new async Task<FileUploadsModel> UpdateAsync(Guid id, FileUploadsUpdateRequest request)
