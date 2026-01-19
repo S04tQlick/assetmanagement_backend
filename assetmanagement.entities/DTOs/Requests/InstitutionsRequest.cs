@@ -1,3 +1,4 @@
+using AssetManagement.Entities.DTOs.Responses;
 using AssetManagement.Entities.Models;
 
 namespace AssetManagement.Entities.DTOs.Requests;
@@ -18,6 +19,8 @@ public class InstitutionsCreateRequest : SanityBaseModel
 
     [MaxLength(7)]
     public required string SecondaryColor { get; set; }
+    
+    public List<FileUploadsResponse>? FileUploads { get; set; }
 }
 
 public class InstitutionsUpdateRequest
@@ -37,6 +40,10 @@ public class InstitutionsUpdateRequest
     [MaxLength(7)] 
     public required string SecondaryColor { get; set; }
     
-    public required string LogoSanityId { get; set; }
-    public required string LogoUrl { get; set; }
+    public List<FileUploadsResponse>? FileUploads { get; set; }
 }
+
+
+    
+    // public required string LogoSanityId { get; set; }
+    // public required string LogoUrl { get; set; }

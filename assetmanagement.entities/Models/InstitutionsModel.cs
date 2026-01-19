@@ -15,10 +15,15 @@ public class InstitutionsModel : SanityBaseModel
     [MaxLength(7)]
     public string? SecondaryColor { get; set; }
 
-    public ICollection<BranchesModel>? Branches { get; set; }
-    public ICollection<UsersModel>? Users { get; set; }
-    public ICollection<AssetsModel>? Assets { get; set; }
-    public ICollection<AddressesModel>? Address { get; set; }
-    public ICollection<MaintenanceLogsModel>? MaintenanceLogs { get; set; }
-    public SubscriptionsModel? Subscription { get; set; }
+     public SubscriptionsModel? Subscription { get; set; }
+    public IEnumerable<FileUploadsModel>? FileUploads { get; set; }
+    public IEnumerable<BranchesModel>? Branches { get; set; }
+    
+    
+    
+    // public ICollection<UsersModel>? Users { get; set; }
+    // public ICollection<AssetsModel>? Assets { get; set; }
+    // public ICollection<AddressesModel>? Address { get; set; }
+    // public ICollection<MaintenanceLogsModel>? MaintenanceLogs { get; set; }
+    
 }

@@ -12,17 +12,9 @@ namespace AssetManagement.API.DAL.Services.BranchesService;
 public class BranchesService(IBranchRepository repository, IMapper mapper)
     : ServiceQueryHandler<BranchesModel, BranchesResponse, BranchesCreateRequest, BranchesUpdateRequest>(repository,
         mapper), IBranchesService
-
 {
     private readonly IMapper _mapper = mapper;
-
-    protected override Expression<Func<BranchesModel, object>>[] DefaultIncludes()
-    {
-        return
-        [
-            x => x.Institutions!
-        ];
-    }
+    
 
     protected override Expression<Func<BranchesModel, bool>> IsExistsPredicate(BranchesCreateRequest request)
     {

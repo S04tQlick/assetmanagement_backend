@@ -6,5 +6,6 @@ public class AwsSettingsModel
     public required string SecretKey { get; set; }
     public required string Region { get; set; }
     public required string BucketName { get; set; }
-    public required string BucketDirectory { get; set; }
+    public required string BucketLogoDirectory { get; set; }
+    public required string BucketDocumentDirectory { get; set; }
 }

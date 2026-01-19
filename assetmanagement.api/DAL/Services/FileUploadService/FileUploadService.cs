@@ -14,10 +14,11 @@ public class FileUploadService(IFileUploadRepository repository, IS3Service s3, 
 {
     public new async Task<FileUploadsModel> CreateAsync(FileUploadsCreateRequest request)
     {
-        var key = await s3.CreateAsync(request.File);
+        var key = await s3.CreateAsync(request.File, request.IsLogo);
          
         request.S3Key = key;
         request.IsActive = true;
+        request.IsLogo = request.IsLogo;
 
         return await base.CreateAsync(request);
     }
@@ -38,7 +39,8 @@ public class FileUploadService(IFileUploadRepository repository, IS3Service s3, 
             throw new NotFoundException($"File with id '{id}' not found.");
 
         request.IsActive = true;
-        request.S3Key = await s3.UpdateAsync(existing.S3Key, request.File);
+        request.IsLogo = request.IsLogo;
+        request.S3Key = await s3.UpdateAsync(existing.S3Key, request.File, request.IsLogo);
         return await base.UpdateAsync(id, request);
     }
 
@@ -48,7 +50,7 @@ public class FileUploadService(IFileUploadRepository repository, IS3Service s3, 
         if (existing is null)
             throw new NotFoundException($"File with id '{id}' not found.");
 
-        await s3.DeleteAsync(existing.S3Key);
+        await s3.DeleteAsync(existing.S3Key, existing.IsLogo);
         return await base.DeleteAsync(id);
     }
 }

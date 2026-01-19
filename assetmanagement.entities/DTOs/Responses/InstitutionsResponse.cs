@@ -7,8 +7,14 @@ public class InstitutionsResponse : BaseResponse
     public required string InstitutionContactNumber { get; set; } 
     public string? PrimaryColor { get; set; }
     public string? SecondaryColor { get; set; }
-    public string? LogoSanityId { get; set; }
-    public string? LogoUrl { get; set; } 
+    
+    public IEnumerable<FileUploadsResponse>? FileUploads { get; set; }
+    public IEnumerable<BranchesResponse>? Branches { get; set; }
+    
+    
+    
+    //public string? LogoSanityId { get; set; }
+    //public string? LogoUrl { get; set; } 
 
     // // Optional nested responses
     // public IEnumerable<BranchesResponse>? Branches { get; set; }

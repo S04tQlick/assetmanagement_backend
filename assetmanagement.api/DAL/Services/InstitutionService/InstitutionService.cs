@@ -8,8 +8,19 @@ using AutoMapper;
 
 namespace AssetManagement.API.DAL.Services.InstitutionService;
 
-public class InstitutionService(IInstitutionRepository repository, IMapper mapper) : ServiceQueryHandler<InstitutionsModel, InstitutionsResponse, InstitutionsCreateRequest, InstitutionsUpdateRequest>(repository, mapper), IInstitutionService
+public class InstitutionService(IInstitutionRepository repository, IMapper mapper)
+    : ServiceQueryHandler<InstitutionsModel, InstitutionsResponse, InstitutionsCreateRequest,
+        InstitutionsUpdateRequest>(repository, mapper), IInstitutionService
 {
+    protected override Expression<Func<InstitutionsModel, object>>[] DefaultIncludes()
+    {
+        return
+        [
+            x => x.FileUploads!,
+            x=>x.Branches!,
+        ];
+    }
+    
     protected override Expression<Func<InstitutionsModel, bool>> IsExistsPredicate(InstitutionsCreateRequest request)
     {
         return x =>
