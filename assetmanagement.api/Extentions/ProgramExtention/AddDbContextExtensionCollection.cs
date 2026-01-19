@@ -35,7 +35,7 @@ public static class AddDbContextExtensionCollection
 
         //Redis (for refresh tokens)
         services.AddSingleton<IConnectionMultiplexer>(
-            ConnectionMultiplexer.Connect(ReturnHelpers.Env("ASSET_MGMT_REDIS_CONNECTION_STRING")!));
+            ConnectionMultiplexer.Connect(ReturnHelpers.Env("ASSET_MGMT_REDIS_CONNECTION_STRING")));
         services.AddSignalR()
             .AddStackExchangeRedis(
                 ReturnHelpers.Env("ASSET_MGMT_REDIS_CONNECTION_STRING") ??
@@ -72,7 +72,7 @@ public static class AddDbContextExtensionCollection
                 {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey =
-                        new SymmetricSecurityKey(Encoding.ASCII.GetBytes(ReturnHelpers.Env("JWT_SECRET")!)),
+                        new SymmetricSecurityKey(Encoding.ASCII.GetBytes(ReturnHelpers.Env("JWT_SECRET"))),
                     ValidateIssuer = !string.IsNullOrEmpty(ReturnHelpers.Env("JWT_ISSUER")),
                     ValidIssuer = ReturnHelpers.Env("JWT_ISSUER"),
                     ValidateAudience = !string.IsNullOrEmpty(ReturnHelpers.Env("JWT_AUDIENCE")),
@@ -97,15 +97,16 @@ public static class AddDbContextExtensionCollection
                 };
             });
 
-        services.AddSingleton(sp =>
+        services.AddSingleton(_ =>
         {
             var settings = new AwsSettingsModel
             {
-                BucketName = ReturnHelpers.Env("AWS_BUCKET_NAME")!,
-                Region = ReturnHelpers.Env("AWS_REGION")!,
-                AccessKey = ReturnHelpers.Env("AWS_ACCESS_KEY_ID")!,
-                SecretKey = ReturnHelpers.Env("AWS_SECRET_ACCESS_KEY")!,
-                BucketDirectory = ReturnHelpers.Env("AWS_BUCKET_DIRECTORY")!
+                BucketName = ReturnHelpers.Env("AWS_BUCKET_NAME"),
+                Region = ReturnHelpers.Env("AWS_REGION"),
+                AccessKey = ReturnHelpers.Env("AWS_ACCESS_KEY_ID"),
+                SecretKey = ReturnHelpers.Env("AWS_SECRET_ACCESS_KEY"),
+                BucketLogoDirectory = ReturnHelpers.Env("AWS_BUCKET_LOGO_DIRECTORY"),
+                BucketDocumentDirectory = ReturnHelpers.Env("AWS_BUCKET_DOCUMENT_DIRECTORY")
             };
 
             if (string.IsNullOrWhiteSpace(settings.AccessKey) ||

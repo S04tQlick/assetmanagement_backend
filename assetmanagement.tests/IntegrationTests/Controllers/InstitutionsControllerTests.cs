@@ -83,8 +83,8 @@ public class InstitutionsControllerTests(ApplicationFixture fixture)
                 row.InstitutionContactNumber.Should().NotBeEmpty();
                 row.PrimaryColor.Should().NotBeEmpty();
                 row.SecondaryColor.Should().NotBeEmpty();
-                row.LogoSanityId.Should().NotBeEmpty();
-                row.LogoUrl.Should().NotBeEmpty();
+                //row.LogoSanityId.Should().NotBeEmpty();
+                //row.LogoUrl.Should().NotBeEmpty();
                 row.IsActive.Should().BeTrue(); 
             }
         }

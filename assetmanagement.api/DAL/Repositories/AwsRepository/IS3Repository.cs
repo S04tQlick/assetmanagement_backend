@@ -5,9 +5,9 @@ namespace AssetManagement.API.DAL.Repositories.AwsRepository;
 
 public interface IS3Repository
 {
-    Task<string> UploadAsync(IFormFile file);
+    Task<string> UploadAsync(IFormFile file, bool isLogo);
     Task<GetObjectResponse> GetByIdAsync(string key);
-    Task DeleteAsync(string key);
+    Task DeleteAsync(string key, bool isLogo);
     Task<ListObjectsV2Response> ListAsync();
-    Task<string> UpdateAsync(string key, IFormFile file);
+    Task<string> UpdateAsync(string key, IFormFile file, bool isLogo);
 }

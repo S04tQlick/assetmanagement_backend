@@ -18,8 +18,7 @@ public abstract class BaseApiController<TEntity, TResponse, TCreateRequest, TUpd
     public virtual async Task<ActionResult<IEnumerable<TResponse>>> GetAll()
     {
         if (!Config.GetAll) return NotFound();
-        var results = await service.GetAllAsync();
-        return Ok(results);
+        return Ok(await service.GetAllAsync());
     }
 
     [HttpGet("{id:guid}")] 
@@ -27,8 +26,7 @@ public abstract class BaseApiController<TEntity, TResponse, TCreateRequest, TUpd
     public virtual async Task<ActionResult<TResponse>> GetById(Guid id)
     {
         if (!Config.GetById) return NotFound();
-        var result = await service.GetByIdAsync(id);
-        return Ok(result);
+        return Ok(await service.GetByIdAsync(id));
     }
 
     [ApiExplorerSettings(IgnoreApi = false)]
@@ -36,8 +34,7 @@ public abstract class BaseApiController<TEntity, TResponse, TCreateRequest, TUpd
     public virtual async Task<ActionResult<IEnumerable<TResponse>>> GetByInstitutionId(Guid institutionId)
     {
         if (!Config.GetByInstitutionId) return NotFound();
-        var results = await service.GetByInstitutionIdAsync(institutionId);
-        return Ok(results);
+        return Ok(await service.GetByInstitutionIdAsync(institutionId));
     }
 
     [HttpGet("active")]
@@ -45,8 +42,7 @@ public abstract class BaseApiController<TEntity, TResponse, TCreateRequest, TUpd
     public virtual async Task<ActionResult<IEnumerable<TResponse>>> GetActiveAsync()
     {
         if (!Config.GetActive) return NotFound();
-        var results = await service.GetAllAsync();
-        return Ok(results);
+        return Ok(await service.GetAllAsync());
     }
 
     [HttpGet("inactive")]
@@ -54,8 +50,7 @@ public abstract class BaseApiController<TEntity, TResponse, TCreateRequest, TUpd
     public virtual async Task<ActionResult<IEnumerable<TResponse>>> GetNotActiveAsync()
     {
         if (!Config.GetInactive) return NotFound();
-        var results = await service.IsNotActiveAsync();
-        return Ok(results);
+        return Ok(await service.IsNotActiveAsync());
     }
 
     [HttpPost]

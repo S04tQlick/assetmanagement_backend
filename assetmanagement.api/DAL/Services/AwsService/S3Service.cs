@@ -7,10 +7,10 @@ namespace AssetManagement.API.DAL.Services.AwsService;
 
 public class S3Service(IS3Repository s3Repo) : IS3Service
 {
-    public async Task<string> CreateAsync(IFormFile file)
+    public async Task<string> CreateAsync(IFormFile file, bool isLogo)
     {
         Log.Information("Starting file upload: {FileName}", file.FileName);
-        return await s3Repo.UploadAsync(file);
+        return await s3Repo.UploadAsync(file, isLogo);
     }
 
     public async Task<ListObjectsV2Response> GetAllAsync()
@@ -23,17 +23,17 @@ public class S3Service(IS3Repository s3Repo) : IS3Service
         return await s3Repo.GetByIdAsync(key);
     }
 
-    public async Task<string> UpdateAsync(string key, IFormFile file)
+    public async Task<string> UpdateAsync(string key, IFormFile file, bool isLogo)
     {
         if (file == null || file.Length == 0)
             throw new ArgumentException("File is empty");
 
-        return await s3Repo.UpdateAsync(key, file);
+        return await s3Repo.UpdateAsync(key, file, isLogo);
     }
 
-    public async Task DeleteAsync(string key)
+    public async Task DeleteAsync(string key, bool isLogo)
     {
-        await s3Repo.DeleteAsync(key);
+        await s3Repo.DeleteAsync(key, isLogo);
     }
 }
 
