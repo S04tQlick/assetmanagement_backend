@@ -5,8 +5,9 @@ using AssetManagement.Entities.Models;
 
 namespace AssetManagement.API.DAL.Services.RolesService;
 
-public interface IRoleService : IServiceQueryHandler<RolesModel, RolesResponse, RolesCreateRequest, RolesUpdateRequest>
-{
-    HealthResponse GetHealth();
-    Task<IEnumerable<RolesResponse>> GetActiveRolesAsync(); 
-}
+public interface IRoleService : IServiceQueryHandler<RolesModel, RolesResponse, RolesCreateRequest, RolesUpdateRequest>;
+
+// {
+//     HealthResponse GetHealth();
+//     Task<IEnumerable<RolesResponse>> GetActiveRolesAsync(); 
+// }

@@ -1,6 +1,6 @@
 namespace AssetManagement.Entities.Models;
 
-public abstract class EmailSettings
+public abstract class EmailSettingsModel
 {
     public required string SmtpServer { get; set; }
     public int Port { get; set; }

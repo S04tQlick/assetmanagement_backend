@@ -1,7 +1,9 @@
+using AssetManagement.Entities.GeneralResponse;
+
 namespace AssetManagement.Entities.Models;
 
 [Table("AssetCategories")]
-public class AssetCategoriesModel : BaseModel
+public class AssetCategoriesModel : BaseModel, IInstitutionOwned
 {
     [MaxLength(100)]
     public required string AssetCategoryName { get; set; }
@@ -10,7 +12,8 @@ public class AssetCategoriesModel : BaseModel
     [ForeignKey(nameof(AssetTypeId))]
     public AssetTypesModel? AssetTypes { get; set; }
     
-    public Guid InstitutionId { get; set; }
-    [ForeignKey(nameof(InstitutionId))]
+    public Guid InstitutionId { get; set; } 
+    
+    [ForeignKey(nameof (InstitutionId))]
     public InstitutionsModel? Institutions{ get; set; }
 }

@@ -1,7 +1,9 @@
+using AssetManagement.Entities.GeneralResponse;
+
 namespace AssetManagement.Entities.Models;
 
 [Table("Users")]
-public class UsersModel : BaseModel
+public class UsersModel : BaseModel, IInstitutionOwned
 {
     private readonly string _email = string.Empty;
 
@@ -36,6 +38,6 @@ public class UsersModel : BaseModel
     public DateTime? LastLogin { get; set; }
     public Guid InstitutionId { get; set; }
     
-    [ForeignKey(nameof(InstitutionId))]
+    [ForeignKey(nameof (InstitutionId))]
     public InstitutionsModel? Institutions { get; set; }
 }

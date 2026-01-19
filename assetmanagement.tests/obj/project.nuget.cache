@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "rwokJTiFV6E=",
+  "dgSpecHash": "eWVOpCTA2xY=",
   "success": true,
   "projectFilePath": "C:\\Users\\sammi\\PROJECTS\\PERSONAL\\JET_BRAINS\\FAST_TRACK_SERVICES\\Assets_Management\\FrontEnd_and_BackEnd\\assetmanagement_backend\\AssetManagement.Tests\\AssetManagement.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sammi\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\sammi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\sammi\\.nuget\\packages\\awssdk.core\\4.0.3.6\\awssdk.core.4.0.3.6.nupkg.sha512",
+    "C:\\Users\\sammi\\.nuget\\packages\\awssdk.extensions.netcore.setup\\4.0.3.17\\awssdk.extensions.netcore.setup.4.0.3.17.nupkg.sha512",
+    "C:\\Users\\sammi\\.nuget\\packages\\awssdk.s3\\4.0.16.1\\awssdk.s3.4.0.16.1.nupkg.sha512",
     "C:\\Users\\sammi\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\sammi\\.nuget\\packages\\bogus\\35.6.5\\bogus.35.6.5.nupkg.sha512",
     "C:\\Users\\sammi\\.nuget\\packages\\bouncycastle.cryptography\\2.6.1\\bouncycastle.cryptography.2.6.1.nupkg.sha512",

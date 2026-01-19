@@ -10,23 +10,26 @@ namespace AssetManagement.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class AssetCategoriesController(IAssetCategoriesService service) : BaseApiController<AssetCategoriesModel, AssetCategoriesResponse, AssetCategoriesCreateRequest, AssetCategoriesUpdateRequest>(service)
-{
-    [HttpGet]
-    [Route(ControllerConstants.HealthRoute)]
-    public HealthResponse GetHealth()
-    {
-        Log.Information("Querying health.");
-        return service.GetHealth();
-    }
-
-    [HttpGet("{institutionId:guid}/{assetTypeId:guid}")]
-    public async Task<IEnumerable<AssetCategoriesResponse>> GetByInstitutionAndType(Guid institutionId, Guid assetTypeId)
-    {
-        return await service.FindAsync(x => x.InstitutionId.Equals(institutionId),
-            x => x.AssetTypeId.Equals(assetTypeId));
-    }
-}
+//public class AssetCategoriesController(IAssetCategoriesService service) : BaseApiController<AssetCategoriesModel, AssetCategoriesResponse, AssetCategoriesCreateRequest, AssetCategoriesUpdateRequest>(service)
+public class AssetCategoriesController(IAssetCategoriesService service)
+    : BaseApiController<AssetCategoriesModel, AssetCategoriesResponse, AssetCategoriesCreateRequest,
+        AssetCategoriesUpdateRequest>(service);
+// {
+//     [HttpGet]
+//     [Route(ControllerConstants.HealthRoute)]
+//     public HealthResponse GetHealth()
+//     {
+//         Log.Information("Querying health.");
+//         return service.GetHealth();
+//     }
+//
+//     // [HttpGet("{institutionId:guid}/{assetTypeId:guid}")]
+//     // public async Task<IEnumerable<AssetCategoriesResponse>> GetByInstitutionAndType(Guid institutionId, Guid assetTypeId)
+//     // {
+//     //     return await service.FindAsync(x => x.InstitutionId.Equals(institutionId),
+//     //         x => x.AssetTypeId.Equals(assetTypeId));
+//     // }
+// }
 
 
 

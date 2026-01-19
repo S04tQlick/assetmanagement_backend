@@ -1,12 +1,14 @@
+using AssetManagement.Entities.GeneralResponse;
+
 namespace AssetManagement.Entities.Models;
 
 [Table("Assets")]
-public class AssetsModel : BaseModel
+public class AssetsModel : BaseModel, IInstitutionOwned
 {
     [Required]
-    public Guid InstitutionId { get; set; }
-
-    [ForeignKey(nameof(InstitutionId))]
+    public Guid InstitutionId { get; set; } 
+    
+    [ForeignKey(nameof (InstitutionId))]
     public InstitutionsModel? Institutions { get; set; }
 
     [Required]

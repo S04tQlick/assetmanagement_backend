@@ -1,12 +1,14 @@
+using AssetManagement.Entities.GeneralResponse;
+
 namespace AssetManagement.Entities.Models;
 
 [Table("Branches")]
-public class BranchesModel : GeoBaseModel
+public class BranchesModel : GeoBaseModel, IInstitutionOwned
 {
     [Required]
-    public Guid InstitutionId { get; set; }
-
-    [ForeignKey(nameof(InstitutionId))]
+    public Guid InstitutionId { get; set; } 
+    
+    [ForeignKey(nameof (InstitutionId))]
     public InstitutionsModel? Institutions { get; set; }
 
     [Required, MaxLength(200)]

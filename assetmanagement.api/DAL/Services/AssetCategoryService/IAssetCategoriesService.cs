@@ -8,7 +8,6 @@ namespace AssetManagement.API.DAL.Services.AssetCategoryService;
 
 public interface IAssetCategoriesService : IServiceQueryHandler<AssetCategoriesModel, AssetCategoriesResponse, AssetCategoriesCreateRequest, AssetCategoriesUpdateRequest>
 {
-    HealthResponse GetHealth();
-    Task<IEnumerable<AssetCategoriesResponse>> FindAsync(Expression<Func<AssetCategoriesModel, bool>> predicate,
-        params Expression<Func<AssetCategoriesModel, object>>[]? includes);
+    // Task<IEnumerable<AssetCategoriesResponse>> FindAsync(Expression<Func<AssetCategoriesModel, bool>> predicate,
+    //     params Expression<Func<AssetCategoriesModel, object>>[]? includes);
 }

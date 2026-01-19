@@ -5,5 +5,4 @@ namespace AssetManagement.API.DAL.Repositories.AssetTypesRepository;
 
 public interface IAssetTypeRepository : IRepositoryQueryHandler<AssetTypesModel>
 {
-    Task<IEnumerable<AssetTypesModel>> GetActiveAssetTypesAsync();
 }

@@ -5,9 +5,8 @@ using AssetManagement.Entities.Models;
 
 namespace AssetManagement.API.DAL.Services.UserRolesService;
 
-public interface IUserRolesService : IServiceQueryHandler<UserRolesModel, UserRolesResponse, UserRolesCreateRequest, UserRolesUpdateRequest>
+public interface IUserRoleService : IServiceQueryHandler<UserRolesModel, UserRolesResponse, UserRolesCreateRequest, UserRolesUpdateRequest>
 {
     Task<IEnumerable<UserRolesResponse>> GetByUserIdAsync(Guid userId);
     Task<IEnumerable<UserRolesResponse>> GetByRoleIdAsync(Guid roleId); 
-    HealthResponse GetHealth();
-}
+} 

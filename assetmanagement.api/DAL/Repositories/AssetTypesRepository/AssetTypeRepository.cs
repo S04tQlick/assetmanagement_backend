@@ -5,14 +5,6 @@ using AssetManagement.Entities.Models;
 
 namespace AssetManagement.API.DAL.Repositories.AssetTypesRepository;
 
-public class AssetTypeRepository(ApplicationDbContext ctx) : RepositoryQueryHandler<AssetTypesModel>(ctx), IAssetTypeRepository
+public class  AssetTypeRepository(ApplicationDbContext ctx) : RepositoryQueryHandler<AssetTypesModel>(ctx), IAssetTypeRepository
 {
-    private readonly ApplicationDbContext _context = ctx;
-    
-    public async Task<IEnumerable<AssetTypesModel>> GetActiveAssetTypesAsync()
-    {
-        return await _context.AssetTypesModel
-            .Where(at => at.IsActive)
-            .ToListAsync();
-    }
 }

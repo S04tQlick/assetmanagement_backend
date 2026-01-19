@@ -1,9 +1,10 @@
 using AssetManagement.Entities.Enums;
+using AssetManagement.Entities.GeneralResponse;
 
 namespace AssetManagement.Entities.Models;
 
 [Table("Maintenances")]
-public class MaintenancesModel : BaseModel
+public class MaintenancesModel : BaseModel, IInstitutionOwned
 {
     [Required] [ForeignKey(nameof(Asset))] 
     public Guid AssetId { get; init; }
@@ -12,8 +13,11 @@ public class MaintenancesModel : BaseModel
     public Guid? VendorId { get; init; }
 
     [Required]
-    [ForeignKey(nameof(Institution))]
+    [ForeignKey(nameof(Institutions))]
     public Guid InstitutionId { get; init; }
+    
+    [ForeignKey(nameof (InstitutionId))]
+    public InstitutionsModel? Institutions { get; set; }
 
     [Required, MaxLength(200)]
     public string Title { get; init; } = string.Empty;
@@ -43,5 +47,4 @@ public class MaintenancesModel : BaseModel
     // Navigation Properties
     public AssetsModel? Asset { get; init; }
     public VendorsModel? Vendor { get; init; }
-    public InstitutionsModel? Institution { get; init; }
 }

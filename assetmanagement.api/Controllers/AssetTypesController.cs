@@ -10,20 +10,28 @@ namespace AssetManagement.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class AssetTypesController(IAssetTypeService service) : BaseApiController<AssetTypesModel, AssetTypesResponse, AssetTypesCreateRequest, AssetTypesUpdateRequest>(service)
-{
-    [HttpGet]
-    [Route(ControllerConstants.HealthRoute)]
-    public HealthResponse GetHealth()
-    {
-        Log.Information("Querying health.");
-        return service.GetHealth();
-    }
- 
-    [HttpGet("active")]
-    public async Task<ActionResult<IEnumerable<AssetTypesResponse>>> GetActive()
-    {
-        Log.Information("Fetching active asset types");
-        return Ok(await service.GetActiveAssetTypesAsync());
-    }
-}
+public class AssetTypesController(IAssetTypeService service)
+    : BaseApiController<AssetTypesModel, AssetTypesResponse, AssetTypesCreateRequest, AssetTypesUpdateRequest>(service);
+// {
+//     [HttpGet]
+//     [Route(ControllerConstants.HealthRoute)]
+//     public HealthResponse GetHealth()
+//     {
+//         Log.Information("Querying health.");
+//         return service.GetHealth();
+//     }
+//  
+//     // [HttpGet("active")]
+//     // public async Task<ActionResult<IEnumerable<AssetTypesResponse>>> GetActive()
+//     // {
+//     //     Log.Information("Fetching active asset types");
+//     //     return Ok(await service.GetActiveAssetTypesAsync());
+//     // }
+//     //
+//     // [HttpGet("in-active")]
+//     // public async Task<ActionResult<IEnumerable<AssetTypesResponse>>> GetInActive()
+//     // {
+//     //     Log.Information("Fetching active asset types");
+//     //     return Ok(await service.GetInActiveAssetTypesAsync());
+//     // }
+// }

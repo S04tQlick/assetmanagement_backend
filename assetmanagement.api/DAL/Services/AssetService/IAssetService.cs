@@ -7,8 +7,5 @@ namespace AssetManagement.API.DAL.Services.AssetService;
 
 public interface IAssetService :  IServiceQueryHandler<AssetsModel, AssetsResponse,AssetsCreateRequest,AssetsUpdateRequest>
 {
-    HealthResponse GetHealth();
-    Task<IEnumerable<AssetsResponse>> GetActiveAssetsAsync();
-    Task<IEnumerable<AssetsResponse>> GetByInstitutionIdAsync(Guid institutionId);  
-    Task<IEnumerable<AssetsResponse>> GetMaintenanceDueAsync(Guid institutionId, Guid branchId);
+    //Task<IEnumerable<AssetsResponse>> GetMaintenanceDueAsync(Guid institutionId, Guid branchId);
 }
